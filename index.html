@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello,vue.js</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <!-- <div id="app"></div>の中がvue.jsの世界。appは任意の名前でいい-->
+  <div id="app">
+   <!-- ◆v-if とv-else -->
+   <p v-if="toggle">YES</p>
+   <p v-else>NO</p>
+
+   <!-- ◆v-else-if -->
+   <p v-if ="color === 'red'">Stop</p>
+   <p v-else-if ="color === 'yellow'">Caution</p>
+   <p v-else-if ="color === 'blue'">Go</p>
+   <p v-else >Not red/yellow/blue</p>
+
+   <!-- ◆v-show -->
+   <!-- v-showはv-elseとは連動しない -->
+   <p v-show="toggle">Hello,Vue.js!</p>
+
+   
+
+
+
+  
+   
+
+
+
+
+
+
+   <!-- デバック用 -->
+   <!-- <pre>{{$data}}</pre> -->
+  </div>
+  <!-- ①vie.jsのCDNを先に読み込む。URLは公式ページから -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <!-- ②<script>下記のようにJSを別ファイルにしない場合はここにJSを書く</script> -->
+  <script src="js/main.js"></script>
+</body>
+</html>
